@@ -1,10 +1,507 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Grant Opportunities in China for Young Foreign Scholars</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .update-banner {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px 25px;
+            margin: 20px 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .update-banner p {
+            color: #856404;
+            font-weight: 500;
+        }
+        
+        .update-banner a {
+            color: #1e3c72;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .update-banner a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            padding: 30px;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+            margin: 30px 0 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #2a5298;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+        
+        .funding-card {
+            background-color: #f8f9fc;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #2a5298;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .funding-title {
+            font-size: 1.6rem;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .level-card {
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .level-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .level-name {
+            font-size: 1.3rem;
+            color: #2a5298;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border-bottom: 2px solid #e1e8ed;
+            padding-bottom: 10px;
+        }
+        
+        .level-funding {
+            background-color: #e8f0fe;
+            color: #1e3c72;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 15px 0;
+        }
+        
+        .level-duration {
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        
+        .requirement-list, .benefit-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .requirement-list li, .benefit-list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+        }
+        
+        .requirement-list li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .benefit-list li:before {
+            content: "★";
+            color: #ffc107;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .info-box {
+            background-color: #e7f3ff;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid #b8daff;
+        }
+        
+        .info-box h4 {
+            color: #004085;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background-color: #1e3c72;
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover {
+            background-color: #f5f7fa;
+        }
+        
+        .contact-info {
+            background-color: #f0f4f8;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info strong {
+            color: #1e3c72;
+            min-width: 100px;
+            display: inline-block;
+        }
+        
+        .deadline-highlight {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        
+        .strategy-section {
+            background: linear-gradient(to right, #f8f9fc, #e8f0fe);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .strategy-section ol {
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        
+        .strategy-section li {
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+        
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .level-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+            }
+            
+            main {
+                padding: 15px;
+            }
+            
+            th, td {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is my website hosted on GitHub Pages.</p>
+    <div class="container">
+        <header>
+            <h1>🇨🇳 2026 Grant Opportunities in China</h1>
+            <p>For Young Foreign Scholars • NSFC Funding Programs</p>
+        </header>
+        
+        <div class="update-banner">
+            <p>📢 <strong>Research Update:</strong> I'll research the 2026 Grants opportunities available in China for young foreign individuals through the provided NSFC link. I will explore the site thoroughly, gather information on eligibility, fields, benefits, and other pertinent details about these grants. I will then compile and report my findings back to you in a clear and structured manner.</p>
+        </div>
+        
+        <main>
+            <p>The 2026 grant opportunities in China for young foreign researchers are primarily offered through the <strong>National Natural Science Foundation of China (NSFC)</strong>. These programs are designed to attract and support talented international scientists, encouraging them to undertake research in China and foster long-term partnerships with local researchers.</p>
+            
+            <h2>📋 Overview of NSFC Grant Programs</h2>
+            <p>The NSFC's grant programs for foreign scholars include several funding levels and disciplinary fields. Young scholars with a Ph.D. earned within the last six years are eligible to apply, provided they have relevant experience in basic research or post-doctoral work. Successful applicants are required to work at least nine months per year at the host institution in China and must sign an agreement with the host organization.</p>
+            
+            <h2>💰 Foreign Scholar Research Fund</h2>
+            <p><em>(国际合作·外国学者研究基金项目)</em></p>
+            <p>This program is administered by the NSFC's International Cooperation Department. It is intended to support foreign scientists who wish to conduct research in China and to foster long-term collaboration between foreign and Chinese researchers. The program has three levels and supports work in nine disciplinary fields (mathematics, chemistry, life sciences, earth sciences, engineering & materials, information science, management science, medical sciences and interdisciplinary sciences).</p>
+            
+            <h3>Program Levels & Funding</h3>
+            <div class="level-grid">
+                <div class="level-card">
+                    <div class="level-name">Foreign Young Scholar</div>
+                    <p><em>(外国青年学者研究基金项目)</em></p>
+                    <div class="level-funding">¥200,000 per year</div>
+                    <p class="level-duration">1 or 2 year projects</p>
+                    <ul class="requirement-list">
+                        <li>Ph.D. ≤ 6 years (earned on or after Jan 1, 2020)</li>
+                        <li>Experience in basic research/postdoctoral work</li>
+                        <li>Must work ≥9 months/year in host institution</li>
+                        <li>Sign an agreement with host institution</li>
+                    </ul>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-name">Foreign Excellent Young Scholar</div>
+                    <p><em>(外国优秀青年学者研究基金项目)</em></p>
+                    <div class="level-funding">¥400,000 per year</div>
+                    <p class="level-duration">1 or 2 year projects</p>
+                    <ul class="requirement-list">
+                        <li>Ph.D. ≤ 15 years (earned on or after Jan 1, 2011)</li>
+                        <li>Advanced professional title</li>
+                        <li>Past experience leading research projects</li>
+                        <li>≥9 months/year in host institution</li>
+                    </ul>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-name">Foreign Senior Scholar</div>
+                    <p><em>(外国资深学者研究基金项目)</em></p>
+                    <div class="level-funding">¥800,000 per year</div>
+                    <p class="level-duration">1 or 2 year projects</p>
+                    <ul class="requirement-list">
+                        <li>High-level professional title</li>
+                        <li>Significant international reputation</li>
+                        <li>≥9 months/year in host institution</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>📅 Project Duration Details</h4>
+                <p><strong>One-year projects:</strong> January 1, 2027 – December 31, 2027</p>
+                <p><strong>Two-year projects:</strong> January 1, 2027 – December 31, 2028</p>
+            </div>
+            
+            <h3>Key Features and Requirements</h3>
+            <ul class="requirement-list">
+                <li><strong>Eligibility:</strong> Applicants must have received their Ph.D. on or after January 1, 2020, and possess experience in basic research or post-doctoral work.</li>
+                <li><strong>Commitment:</strong> Scholars are required to work at least nine months per year at the host institution in China and sign a formal agreement.</li>
+                <li><strong>Funding:</strong> The grant provides direct funding of ¥200,000 per year (for Young Scholar level).</li>
+                <li><strong>Project Duration:</strong> Projects may be funded for one or two years as detailed above.</li>
+            </ul>
+            
+            <h3>Application Restrictions & Requirements</h3>
+            <ul class="requirement-list">
+                <li><strong>One grant per level</strong> – An applicant may only receive one award in each level and may not apply for multiple levels in the same year. Persons who have previously led other NSFC youth grants cannot apply for certain levels.</li>
+                <li><strong>Application language & submission</strong> – Proposals must be written in English with a Chinese title and abstract. Applicants use NSFC's online system (grants.nsfc.gov.cn).</li>
+                <li><strong>Attachments</strong> – A signed project application agreement and formal employment contract with the Chinese host institution must be uploaded, committing to ≥9 months/year in the host institution.</li>
+                <li><strong>No paper submission</strong> – Completed applications and attachments are submitted electronically.</li>
+                <li><strong>Ethics & safety</strong> – Research involving biosafety, information security or other sensitive areas must upload ethics and safety approvals.</li>
+            </ul>
+            
+            <div class="deadline-highlight">
+                ⏰ Timeline: The 2026 call accepts proposals 1 March 2026 – 20 March 2026 (16:00 Beijing time)
+            </div>
+            
+            <h3>Contact Information</h3>
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> rfis@nsfc.gov.cn</p>
+                <p><strong>📞 Phone:</strong> +86 10 62327413 / 62327244 / 62328949</p>
+                <p><strong>💻 Technical support:</strong> +86 10 62317474</p>
+                <p><strong>🌐 Online system:</strong> grants.nsfc.gov.cn</p>
+            </div>
+            
+            <h2>🌟 Excellent Young Scientist Fund (Overseas) – "海外优青"</h2>
+            <p>The Excellent Young Scientist Fund (Overseas) is another NSFC program aimed at young overseas researchers, including non-Chinese nationals. Many universities advertise this opportunity to attract talent. Its main goal is to encourage promising young scientists working abroad to undertake innovative research in China.</p>
+            
+            <h3>Applicant Eligibility (based on pre-announcement)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requirement</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Age & Degree</strong></td>
+                        <td>Born on or after January 1, 1986 and hold a Ph.D.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Discipline</strong></td>
+                        <td>Research primarily in natural sciences or engineering</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overseas Experience</strong></td>
+                        <td>≥36 months in a formal teaching/research position at overseas institution before deadline</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Track Record</strong></td>
+                        <td>Recognized research achievements and potential to become a leading scientist</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Employment Status</strong></td>
+                        <td>Must not already be working full-time in China or returned after January 1, 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Funding & Benefits</h3>
+            <div class="funding-card">
+                <ul class="benefit-list">
+                    <li><strong>Funding amount:</strong> RMB 1–3 million over 3 years (estimated)</li>
+                    <li><strong>Host institution support:</strong> Tenure-track professorships, competitive salary, performance bonuses</li>
+                    <li><strong>Housing subsidies:</strong> Substantial housing assistance provided</li>
+                    <li><strong>Research support:</strong> Research assistants, guaranteed graduate student quotas, postdocs</li>
+                    <li><strong>Family support:</strong> Assistance with children's education</li>
+                    <li><strong>Matching funds:</strong> Many universities offer 1:1 matching of NSFC funding</li>
+                </ul>
+            </div>
+            
+            <h3>Institutional Packages Examples</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>University</th>
+                        <th>Offer Highlights</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Northeast Normal University</strong></td>
+                        <td>Tenure-track professorships, competitive salary, housing subsidies, research assistants, guaranteed graduate students, children's education assistance, 1:1 funding match</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Henan Normal University</strong></td>
+                        <td>100–300 million Yuan funding, three-year term, academic posts, housing, research funds, relocation assistance</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>🎯 How Young Foreigners Can Leverage These Opportunities</h2>
+            
+            <div class="strategy-section">
+                <ol>
+                    <li><strong>Determine the appropriate grant:</strong> Researchers who recently completed their Ph.D. (<6 years) or have limited funding needs may apply for the Foreign Young Scholar project. Those with more experience (Ph.D. ≤15 years and higher rank) can consider the Foreign Excellent Young Scholar category. Scientists with established reputations should look at the Foreign Senior Scholar level. Alternatively, high-performing overseas researchers who plan to relocate to China for at least three years may apply for the Excellent Young Scientist Fund (Overseas).</li>
+                    
+                    <li><strong>Find a host institution and sign agreements:</strong> Applicants must partner with a Chinese university or research institute. They must sign a project application agreement and an employment contract committing them to spend ≥9 months per year at the host institution.</li>
+                    
+                    <li><strong>Prepare documents and apply online:</strong> Applications are submitted through NSFC's grants system. The proposal must be written in English (with Chinese title/abstract), include budgets and keywords, and upload required attachments. The online system is open from 1 March 2026 to 20 March 2026 for the foreign scholar fund; the Excellent Young Scientist Fund typically closes in mid-April.</li>
+                    
+                    <li><strong>Consider university support packages:</strong> Different universities offer various incentives (positions, salary, housing, research funds). Evaluate these offers and choose the institution that best fits your career goals. For example, Northeast Normal University offers matching funds, housing subsidies and research assistant support, while Henan Normal University lists a funding range of 1–3 million yuan and requires full-time commitment for three years.</li>
+                </ol>
+            </div>
+            
+            <div class="info-box">
+                <h4>⚠️ Important Note</h4>
+                <p>For more details, applicants are encouraged to review official NSFC guidelines and consult resources provided by universities and government agencies, especially if the main NSFC web page is unavailable. Because the NSFC web page mentioned currently returns a 502 error, the information above comes from university and government sites that have replicated the 2026 guidelines.</p>
+            </div>
+            
+            <p>By aligning your career goals with one of these NSFC programs and partnering with a supportive Chinese institution, young foreign researchers can secure substantial funding and build collaborative research programs in China.</p>
+        </main>
+        
+        <footer>
+            <p>© 2026 Grant Opportunities in China for Young Foreign Scholars | Information compiled from NSFC and university sources</p>
+            <p><small>Last updated: February 2026 | For the most current information, always check official NSFC announcements</small></p>
+        </footer>
+    </div>
 </body>
 </html>
